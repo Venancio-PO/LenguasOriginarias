@@ -1,0 +1,325 @@
+h1 {
+    text-align: center;
+    color: goldenrod;
+    font-size: 35px;
+    margin: 0;
+}
+
+#principal {
+    text-align: center;
+    color: #DAA520;
+    font-size: 52px;
+    font-weight: 700;
+    margin: 40px 0 30px 0;
+    letter-spacing: 5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#principal::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, goldenrod, transparent);
+    border-radius: 2px;
+}
+
+#contenedor1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Estilos para los divs que contienen los botones */
+#contenedor1 > div {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* CAMBIO: Alinear contenido abajo en lugar del centro */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* ← CAMBIADO de center a flex-end */
+    padding-bottom: 20px; /* ← AÑADIDO para dar espacio desde el borde inferior */
+}
+
+/* Overlay oscuro semitransparente */
+#contenedor1 > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+/* Efecto hover en el div */
+#contenedor1 > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#contenedor1 > div:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes específicas para cada lengua */
+#contenedor1 > div:nth-child(1) {
+    background-image: url('../img/chatino.png');
+}
+
+#contenedor1 > div:nth-child(2) {
+    background-image: url('../img/zapoteca.png');
+}
+
+#contenedor1 > div:nth-child(3) {
+    background-image: url('../img/mixteco.png');
+}
+
+/* Botones dentro de los divs */
+#contenedor1 button {
+    position: relative;
+    z-index: 2;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(245, 245, 220, 0.95);
+    border: none;
+    border-radius: 8px;
+    padding: 0 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contenedor1 button:hover {
+    background-color: goldenrod;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4);
+}
+
+#contenedor2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#contenedorAtras {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+#btnAtras {
+    grid-column: 1;
+    justify-self: start;
+}
+
+#atras h1 {
+    grid-column: 2;
+    justify-self: center;
+}
+
+button {
+    width: auto;
+    height: 40px;
+    text-align: center;
+    background-color: beige;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: goldenrod;
+    color: white;
+}
+
+#mensaje-contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+#mensaje-contenedor h2 {
+    color: goldenrod;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+#btnRegresar {
+    background-color: beige;
+    color: black;
+    font-size: 18px;
+    padding: 12px 30px;
+}
+
+#btnRegresar:hover {
+    background-color: #d4a017;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #contenedor1 > div {
+        width: 250px;
+        height: 180px;
+    }
+    
+    #contenedor1 button {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+}
+/* Estilos para contenedor2 - mismo estilo que contenedor1 */
+#contenedor2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Estilos para los divs que contienen los botones en contenedor2 */
+#contenedor2 > div {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Alinear contenido abajo */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+/* Overlay oscuro semitransparente */
+#contenedor2 > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+/* Efecto hover en el div */
+#contenedor2 > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#contenedor2 > div:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes específicas para cada variante de Chatino */
+#contenedor2 > div:nth-child(1) {
+    background-image: url('../img/figura1.png');
+}
+
+#contenedor2 > div:nth-child(2) {
+    background-image: url('../img/figura2.png');
+}
+
+#contenedor2 > div:nth-child(3) {
+    background-image: url('../img/figura3.png');
+}
+
+#contenedor2 > div:nth-child(4) {
+    background-image: url('../img/figura4.png');
+}
+
+#contenedor2 > div:nth-child(5) {
+    background-image: url('../img/figura5.png');
+}
+
+/* Botones dentro de contenedor2 */
+#contenedor2 button {
+    position: relative;
+    z-index: 2;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(245, 245, 220, 0.95);
+    border: none;
+    border-radius: 8px;
+    padding: 0 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contenedor2 button:hover {
+    background-color: goldenrod;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4);
+}
+
+/* Responsive para contenedor2 */
+@media (max-width: 768px) {
+    #contenedor2 > div {
+        width: 250px;
+        height: 300px;
+    }
+    
+    #contenedor2 button {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+}
