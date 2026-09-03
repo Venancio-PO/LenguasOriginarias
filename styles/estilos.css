@@ -86,15 +86,15 @@ h1 {
 
 /* Imágenes específicas para cada lengua */
 #contenedor1 > div:nth-child(1) {
-    background-image: url('../img/chatino.png');
+    background-image: url('../img/chatino.webp');
 }
 
 #contenedor1 > div:nth-child(2) {
-    background-image: url('../img/zapoteca.png');
+    background-image: url('../img/zapoteca.webp');
 }
 
 #contenedor1 > div:nth-child(3) {
-    background-image: url('../img/mixteco.png');
+    background-image: url('../img/mixteco.webp');
 }
 
 /* Botones dentro de los divs */
@@ -267,23 +267,23 @@ button:hover {
 
 /* Imágenes específicas para cada variante de Chatino */
 #contenedor2 > div:nth-child(1) {
-    background-image: url('../img/figura1.png');
+    background-image: url('../img/figura1.webp');
 }
 
 #contenedor2 > div:nth-child(2) {
-    background-image: url('../img/figura2.png');
+    background-image: url('../img/figura2.webp');
 }
 
 #contenedor2 > div:nth-child(3) {
-    background-image: url('../img/figura3.png');
+    background-image: url('../img/figura3.webp');
 }
 
 #contenedor2 > div:nth-child(4) {
-    background-image: url('../img/figura4.png');
+    background-image: url('../img/figura4.webp');
 }
 
 #contenedor2 > div:nth-child(5) {
-    background-image: url('../img/figura5.png');
+    background-image: url('../img/figura5.webp');
 }
 
 /* Botones dentro de contenedor2 */
