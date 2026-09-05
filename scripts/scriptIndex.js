@@ -6,7 +6,7 @@ function mostrarMensaje() {
     // Ocultar el contenido original Y el contenedor de atrás
     document.querySelector('h1').style.display = 'none';
     document.querySelector('#contenedor2').style.display = 'none';
-    document.querySelector('#contenedorAtras').style.display = 'none'; // ← AÑADE ESTA LÍNEA
+    document.querySelector('#contenedorAtras').style.display = 'none';
     
     // Crear el contenedor del mensaje
     const mensajeDiv = document.createElement('div');
@@ -22,7 +22,7 @@ function mostrarMensaje() {
     document.getElementById('btnRegresar').addEventListener('click', function() {
         document.querySelector('h1').style.display = 'block';
         document.querySelector('#contenedor2').style.display = 'flex';
-        document.querySelector('#contenedorAtras').style.display = 'grid'; // ← AÑADE ESTA LÍNEA
+        document.querySelector('#contenedorAtras').style.display = 'flex';
         mensajeDiv.remove();
     });
 }
@@ -35,8 +35,4 @@ botones[4].addEventListener('click', mostrarMensaje); // Chatino de Tataltepec
 
 document.getElementById('btnZenzontepec').addEventListener('click', function() {
     window.location.href = 'content.html';
-});
-
-document.getElementById('btnAtras').addEventListener('click', function() {
-    window.location.href = 'index.html';
 });

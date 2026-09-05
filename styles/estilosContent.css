@@ -5,25 +5,7 @@ h1 {
     margin: 0;
 }
 
-#atras {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    padding: 20px;
-    gap: 10px;
-}
-
-#btnAtras {
-    grid-column: 1;
-    justify-self: start;
-}
-
-#atras h1 {
-    grid-column: 2;
-    justify-self: center;
-}
-
-/* Contenedor principal con el mismo estilo */
+/* Contenedor principal */
 #contenedor1 {
     display: flex;
     justify-content: center;
@@ -44,13 +26,11 @@ h1 {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-    /* Imagen de fondo */
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    /* Alinear contenido abajo */
+
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -127,7 +107,7 @@ h1 {
     box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4);
 }
 
-/* Botones generales (como el de regresar) */
+/* Botón general (regresar) */
 button {
     width: auto;
     height: 40px;
@@ -145,42 +125,13 @@ button:hover {
     color: white;
 }
 
-/* Mensaje de contenido no disponible */
-#mensaje-contenedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    text-align: center;
-}
-
-#mensaje-contenedor h2 {
-    color: goldenrod;
-    font-size: 28px;
-    margin-bottom: 30px;
-    padding: 0 20px;
-}
-
-#btnRegresar {
-    background-color: beige;
-    color: black;
-    font-size: 18px;
-    padding: 12px 30px;
-}
-
-#btnRegresar:hover {
-    background-color: #d4a017;
-    color: white;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     #contenedor1 > div {
         width: 250px;
         height: 300px;
     }
-    
+
     #contenedor1 button {
         font-size: 14px;
         padding: 0 20px;
