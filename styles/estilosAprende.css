@@ -95,3 +95,9 @@ button:hover {
     background-color: goldenrod;
     color: white;
 }
+
+@media (max-width: 768px) {
+    #tema-lista {
+        grid-template-columns: 1fr;
+    }
+}
