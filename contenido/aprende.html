@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/estilosAprende.css">
+    <script src="../scripts/scriptAprende.js" defer></script>
+    <title>Aprende</title>
+</head>
+<body>
+    <h1>Aprende un poco</h1>
+
+    <div id="temas-grid">
+        <button class="tema-btn" data-tema="frutas">Frutas</button>
+        <button class="tema-btn" data-tema="familia">Familia</button>
+        <button class="tema-btn" data-tema="numeros">Números</button>
+        <button class="tema-btn" data-tema="colores">Colores</button>
+    </div>
+
+    <div id="contenido-tema" class="oculto">
+        <h2 id="tema-titulo"></h2>
+        <ul id="tema-lista"></ul>
+        <button id="btnCerrarTema">Volver a los temas</button>
+    </div>
+
+    <button id="btnAtrasAprende">REGRESAR</button>
+</body>
+</html>
