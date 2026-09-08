@@ -7,10 +7,25 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: justify;
     color: goldenrod;
-    font-size: 35px;
     margin: 0 0 30px 0;
+
+    /* Acomodar las dos líneas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.titulo-chatino {
+    font-size: 35px;
+}
+
+.titulo-espanol {
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8891f;
 }
 
 .oculto {
@@ -27,15 +42,32 @@ h1 {
 }
 
 .tema-btn {
-    height: 80px;
+    min-height: 80px;
     background-color: #3a3a3a;
     color: goldenrod;
     border: 2px solid goldenrod;
     border-radius: 10px;
-    font-size: 18px;
     font-family: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
+    padding: 10px 20px;
+    justify-content: center;   /* AGREGADO — esto centra verticalmente */
+}
+
+.tema-btn:hover {
+    background-color: goldenrod;
+    color: #2b2b2b;
+}
+
+.tema-chatino {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tema-espanol {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.85;
 }
 
 .tema-btn:hover {
@@ -78,21 +110,65 @@ h1 {
     padding: 8px 0;
 }
 
-/* Botón general */
+/* estilo para el encabezado de cada sección */
+
+#contenido-tema h2 {
+    color: goldenrod;
+    text-align: center;
+    margin-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.tema-titulo-chatino {
+    font-size: 28px;
+}
+
+.tema-titulo-espanol {
+    font-size: 16px;
+    font-weight: 400;
+    color: #b8891f;
+}
+
+/* Botón general (regresar) */
 button {
     width: auto;
-    height: 40px;
+    height: auto;
+    min-height: 40px;
     text-align: center;
     background-color: beige;
     border: none;
     border-radius: 5px;
-    padding: 0 20px;
+    padding: 8px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
 }
 
 button:hover {
     background-color: goldenrod;
+    color: white;
+}
+
+.nombre-chatino-regresar {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nombre-espanol-regresar {
+    font-size: 11px;
+    font-weight: 400;
+    color: #555;
+}
+
+button:hover .nombre-espanol-regresar {
     color: white;
 }
 

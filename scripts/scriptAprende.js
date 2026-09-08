@@ -2,6 +2,7 @@
 const temas = {
     frutas: {
         titulo: 'Frutas',
+        tituloChatino: "Nchi'yú",
         palabras: [
             { es: 'Aguacate', chatino: 'Lyisu̱' },
             { es: 'Calabaza', chatino: 'Chojo' },
@@ -18,6 +19,7 @@ const temas = {
     },
     familia: {
         titulo: 'Familia',
+        tituloChatino: 'Letaa',
         palabras: [
             { es: 'Abuela', chatino: "Nyä'ä-kula" },
             { es: 'Abuelo', chatino: 'Juti-kula' },
@@ -43,6 +45,7 @@ const temas = {
     },
     numeros: {
         titulo: 'Números',
+        tituloChatino: 'Numero',
         palabras: [
             { es: 'Uno', chatino: "Tsaka" },
             { es: 'Dos', chatino: "Tukuá" },
@@ -68,6 +71,7 @@ const temas = {
     },
     colores: {
         titulo: 'Colores',
+        tituloChatino: 'Kulor',
         palabras: [
             { es: 'Amarillo', chatino: "Ngachi" },
             { es: 'Amarillo-claro', chatino: "Ngachi-lee" },
@@ -87,7 +91,28 @@ const temas = {
             { es: 'Verde-oscuro', chatino: "Nga'a̱-lee" },
             { es: 'Verde-tierno', chatino: "Nga'a̱-kuenë'" }
         ]
-    }
+    },
+    tiempo: {
+        titulo: 'Tiempo',
+        tituloChatino: "Kuea'",
+        palabras: [
+            { es: 'tiempo1', chatino: "tiempo" },
+        ]
+    },
+    animales: {
+        titulo: 'Animal',
+        tituloChatino: "Nya'ne",
+        palabras: [
+            { es: 'animal1', chatino: "animal" },
+        ]
+    },
+    plantas: {
+        titulo: 'Plantas',
+        tituloChatino: "Kishë''",
+        palabras: [
+            { es: 'Planta1', chatino: "Planta" },
+        ]
+    },
 };
 
 const temasGrid = document.getElementById('temas-grid');
@@ -100,7 +125,10 @@ document.querySelectorAll('.tema-btn').forEach(function(boton) {
         const clave = boton.getAttribute('data-tema');
         const tema = temas[clave];
 
-        temaTitulo.textContent = tema.titulo;
+        temaTitulo.innerHTML = `
+            <span class="tema-titulo-chatino">${tema.tituloChatino}</span>
+            <span class="tema-titulo-espanol">${tema.titulo}</span>
+        `;
         temaLista.innerHTML = '';
 
         tema.palabras.forEach(function(par) {

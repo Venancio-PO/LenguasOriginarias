@@ -7,15 +7,30 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: justify;
     color: goldenrod;
+    margin: 0;
+
+    /* Acomodar las dos líneas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.titulo-chatino {
     font-size: 35px;
-    margin: 0 30px 30px 0;
+}
+
+.titulo-espanol {
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8891f;
 }
 
 #texto-historia {
     max-width: 800px;
-    margin: 0 auto 40px auto;
+    margin: 30px auto 40px auto;
     line-height: 1.8;
     font-size: 18px;
     text-align: justify;
@@ -24,19 +39,56 @@ h1 {
     border-radius: 10px;
 }
 
+/* estilo del mapa*/
+#mapa {
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#mapa iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+/* Botón general (regresar) */
 button {
     width: auto;
-    height: 40px;
+    height: auto;
+    min-height: 40px;
     text-align: center;
     background-color: beige;
     border: none;
     border-radius: 5px;
-    padding: 0 20px;
+    padding: 8px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
 }
 
 button:hover {
     background-color: goldenrod;
+    color: white;
+}
+
+.nombre-chatino-regresar {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nombre-espanol-regresar {
+    font-size: 11px;
+    font-weight: 400;
+    color: #555;
+}
+
+button:hover .nombre-espanol-regresar {
     color: white;
 }

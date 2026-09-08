@@ -1,33 +1,31 @@
-// Seleccionar los botones
 const botones = document.querySelectorAll('#contenedor2 button');
 
-// Función para mostrar mensaje
 function mostrarMensaje() {
-    // Ocultar el contenido original Y el contenedor de atrás
     document.querySelector('h1').style.display = 'none';
     document.querySelector('#contenedor2').style.display = 'none';
-    document.querySelector('#contenedorAtras').style.display = 'none';
     
-    // Crear el contenedor del mensaje
     const mensajeDiv = document.createElement('div');
     mensajeDiv.id = 'mensaje-contenedor';
     mensajeDiv.innerHTML = `
-        <h2>CONTENIDO NO DISPONIBLE POR AHORA, ESTAMOS TRABAJANDO EN ELLO</h2>
-        <button id="btnRegresar">Regresar</button>
-    `;
+    <h2>
+        <span class="mensaje-chatino">Natukui ntsu'u ndee tsa nyi, ti' ndea'</span>
+        <span class="mensaje-espanol">CONTENIDO NO DISPONIBLE POR AHORA, ESTAMOS TRABAJANDO EN ELLO</span>
+    </h2>
+    <button id="btnRegresar">
+        <span class="nombre-chatino-regresar">Tya tsutsö'</span>
+        <span class="nombre-espanol-regresar">Atrás</span>
+    </button>
+`;
     
     document.body.appendChild(mensajeDiv);
     
-    // Agregar evento al botón regresar
     document.getElementById('btnRegresar').addEventListener('click', function() {
-        document.querySelector('h1').style.display = 'block';
+        document.querySelector('h1').style.display = 'flex';
         document.querySelector('#contenedor2').style.display = 'flex';
-        document.querySelector('#contenedorAtras').style.display = 'flex';
         mensajeDiv.remove();
     });
 }
 
-// Agregar eventos a los botones (excepto el primero que va a content.html)
 botones[1].addEventListener('click', mostrarMensaje); // Chatino de Juquila
 botones[2].addEventListener('click', mostrarMensaje); // Chatino de Quehije
 botones[3].addEventListener('click', mostrarMensaje); // Chatino de Jamiltepec
