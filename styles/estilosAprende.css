@@ -173,6 +173,23 @@ button:hover .nombre-espanol-regresar {
 }
 
 @media (max-width: 768px) {
+    #temas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .tema-btn {
+        padding: 8px 10px;
+    }
+
+    .tema-chatino {
+        font-size: 15px;
+    }
+
+    .tema-espanol {
+        font-size: 11px;
+    }
+
     #tema-lista {
         grid-template-columns: 1fr;
     }
